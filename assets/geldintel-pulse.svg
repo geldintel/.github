@@ -1,0 +1,81 @@
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">GeldIntel animated intelligence field</title>
+  <desc id="desc">An animated 2026 financial intelligence banner for GeldIntel.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1200" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#071014"/>
+      <stop offset="0.45" stop-color="#0B1F23"/>
+      <stop offset="1" stop-color="#102018"/>
+    </linearGradient>
+    <linearGradient id="signal" x1="180" y1="50" x2="1060" y2="350" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#63E6BE"/>
+      <stop offset="0.45" stop-color="#8FFFE1"/>
+      <stop offset="1" stop-color="#D4AF37"/>
+    </linearGradient>
+    <radialGradient id="core" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(600 206) rotate(90) scale(190 330)">
+      <stop offset="0" stop-color="#8FFFE1" stop-opacity="0.42"/>
+      <stop offset="0.42" stop-color="#63E6BE" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#63E6BE" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="0 0 0 0 0.39 0 0 0 0 0.90 0 0 0 0 0.74 0 0 0 0.85 0"/>
+      <feBlend in="SourceGraphic" mode="screen"/>
+    </filter>
+    <pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse">
+      <path d="M 36 0 L 0 0 0 36" stroke="#8FFFE1" stroke-opacity="0.08" stroke-width="1"/>
+    </pattern>
+    <style>
+      .grid { animation: drift 10s linear infinite; }
+      .orbit-a { transform-origin: 600px 206px; animation: spin 18s linear infinite; }
+      .orbit-b { transform-origin: 600px 206px; animation: spin 26s linear infinite reverse; }
+      .dash { stroke-dasharray: 16 18; animation: dash 2.8s linear infinite; }
+      .blink { animation: blink 1.8s ease-in-out infinite alternate; }
+      .rise { animation: rise 4s ease-in-out infinite; }
+      @keyframes drift { from { transform: translateX(0); } to { transform: translateX(36px); } }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      @keyframes dash { to { stroke-dashoffset: -68; } }
+      @keyframes blink { from { opacity: .28; } to { opacity: 1; } }
+      @keyframes rise { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="420" rx="26" fill="url(#bg)"/>
+  <rect class="grid" width="1240" height="420" fill="url(#grid)" opacity="0.85"/>
+  <rect width="1200" height="420" fill="url(#core)"/>
+
+  <g opacity="0.7">
+    <path class="dash" d="M140 323 C300 228 364 78 527 151 C664 213 730 332 1045 94" stroke="url(#signal)" stroke-width="2"/>
+    <path class="dash" d="M122 112 C287 187 373 304 527 248 C673 194 780 69 1085 278" stroke="url(#signal)" stroke-width="2" opacity="0.52"/>
+  </g>
+
+  <g class="orbit-a" filter="url(#glow)">
+    <ellipse cx="600" cy="206" rx="286" ry="88" stroke="url(#signal)" stroke-width="2" opacity="0.62"/>
+    <circle cx="886" cy="206" r="6" fill="#8FFFE1"/>
+  </g>
+  <g class="orbit-b" filter="url(#glow)">
+    <ellipse cx="600" cy="206" rx="190" ry="145" stroke="url(#signal)" stroke-width="2" opacity="0.38"/>
+    <circle cx="600" cy="61" r="5" fill="#D4AF37"/>
+  </g>
+
+  <g filter="url(#glow)">
+    <circle cx="600" cy="206" r="72" fill="#081B1D" stroke="url(#signal)" stroke-width="2"/>
+    <circle class="blink" cx="600" cy="206" r="41" fill="#63E6BE" opacity="0.38"/>
+    <circle cx="600" cy="206" r="12" fill="#F5D66A"/>
+  </g>
+
+  <g class="rise">
+    <text x="600" y="176" text-anchor="middle" fill="#EFFFF8" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="68" font-weight="800" letter-spacing="8">GELDINTEL</text>
+    <text x="600" y="225" text-anchor="middle" fill="#A7F7DD" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="18" font-weight="700" letter-spacing="6">AI-NATIVE FINANCIAL INTELLIGENCE</text>
+    <text x="600" y="270" text-anchor="middle" fill="#F6DE77" font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="16" font-weight="700" letter-spacing="5">2026 OPERATING MODE</text>
+  </g>
+
+  <g fill="#8FFFE1" opacity="0.85">
+    <circle class="blink" cx="170" cy="86" r="3"/>
+    <circle class="blink" cx="238" cy="340" r="4"/>
+    <circle class="blink" cx="980" cy="78" r="4"/>
+    <circle class="blink" cx="1062" cy="330" r="3"/>
+    <circle class="blink" cx="456" cy="78" r="3"/>
+    <circle class="blink" cx="744" cy="346" r="4"/>
+  </g>
+</svg>

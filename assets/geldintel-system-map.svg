@@ -1,0 +1,74 @@
+<svg width="1200" height="520" viewBox="0 0 1200 520" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">GeldIntel animated system map</title>
+  <desc id="desc">Animated cards connected to a central intelligence layer.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#102126"/>
+      <stop offset="1" stop-color="#071014"/>
+    </linearGradient>
+    <linearGradient id="wire" x1="134" y1="87" x2="1020" y2="442" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#62E6BE"/>
+      <stop offset="0.58" stop-color="#C9FFE9"/>
+      <stop offset="1" stop-color="#F0C84B"/>
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-30%" width="140%" height="160%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feBlend in="SourceGraphic" in2="blur" mode="screen"/>
+    </filter>
+    <style>
+      .wire { stroke-dasharray: 10 16; animation: flow 2.2s linear infinite; }
+      .card-a { animation: floatA 5s ease-in-out infinite; }
+      .card-b { animation: floatB 6.5s ease-in-out infinite; }
+      .pulse { animation: pulse 2.4s ease-in-out infinite; transform-origin: 600px 260px; }
+      @keyframes flow { to { stroke-dashoffset: -52; } }
+      @keyframes floatA { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+      @keyframes floatB { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+      @keyframes pulse { 0%, 100% { transform: scale(1); opacity: .65; } 50% { transform: scale(1.06); opacity: 1; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="520" rx="24" fill="#071014"/>
+  <path d="M98 92 C308 33 459 50 596 111 C744 177 874 120 1089 82" stroke="#63E6BE" stroke-opacity="0.11" stroke-width="2"/>
+  <path d="M82 429 C271 345 449 361 595 418 C766 484 881 421 1118 455" stroke="#F0C84B" stroke-opacity="0.11" stroke-width="2"/>
+
+  <g opacity="0.75">
+    <path class="wire" d="M268 127 C386 142 466 181 526 234" stroke="url(#wire)" stroke-width="2"/>
+    <path class="wire" d="M930 127 C815 146 735 183 674 234" stroke="url(#wire)" stroke-width="2"/>
+    <path class="wire" d="M267 393 C387 377 468 339 526 286" stroke="url(#wire)" stroke-width="2"/>
+    <path class="wire" d="M930 393 C813 376 734 338 674 286" stroke="url(#wire)" stroke-width="2"/>
+  </g>
+
+  <g class="pulse" filter="url(#softGlow)">
+    <rect x="487" y="193" width="226" height="134" rx="20" fill="#0D2425" stroke="#8FFFE1" stroke-width="2"/>
+    <text x="600" y="250" text-anchor="middle" fill="#EFFFF8" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="28" font-weight="800">Geld Core</text>
+    <text x="600" y="287" text-anchor="middle" fill="#9DF5DB" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15" font-weight="700" letter-spacing="2">DECIDE WITH SIGNAL</text>
+  </g>
+
+  <g class="card-a">
+    <rect x="91" y="69" width="270" height="116" rx="18" fill="url(#panel)" stroke="#2C6F61"/>
+    <text x="126" y="121" fill="#EFFFF8" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="800">Data surface</text>
+    <text x="126" y="151" fill="#9DF5DB" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">From fragmented inputs to live context</text>
+  </g>
+  <g class="card-b">
+    <rect x="839" y="69" width="270" height="116" rx="18" fill="url(#panel)" stroke="#7E6C25"/>
+    <text x="874" y="121" fill="#EFFFF8" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="800">Risk radar</text>
+    <text x="874" y="151" fill="#F2D86F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Control, auditability, and alerts</text>
+  </g>
+  <g class="card-b">
+    <rect x="91" y="335" width="270" height="116" rx="18" fill="url(#panel)" stroke="#7E6C25"/>
+    <text x="126" y="387" fill="#EFFFF8" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="800">Automation</text>
+    <text x="126" y="417" fill="#F2D86F" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Workflows that remove operational drag</text>
+  </g>
+  <g class="card-a">
+    <rect x="839" y="335" width="270" height="116" rx="18" fill="url(#panel)" stroke="#2C6F61"/>
+    <text x="874" y="387" fill="#EFFFF8" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="24" font-weight="800">Treasury clarity</text>
+    <text x="874" y="417" fill="#9DF5DB" font-family="Inter, ui-sans-serif, system-ui, sans-serif" font-size="15">Position, cash, movement, and forecast</text>
+  </g>
+
+  <g fill="#63E6BE" opacity="0.84">
+    <circle cx="526" cy="234" r="5"/>
+    <circle cx="674" cy="234" r="5"/>
+    <circle cx="526" cy="286" r="5"/>
+    <circle cx="674" cy="286" r="5"/>
+  </g>
+</svg>
